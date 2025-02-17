@@ -591,6 +591,7 @@ h2::after {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  font-size: 2rem;
   background: var(--primary);
   color: var(--light);
   border: none;
@@ -604,6 +605,7 @@ h2::after {
 
 .back-to-top:hover {
   background: var(--secondary);
+  font-size: 2rem;
   transform: scale(1.1);
 }
 
