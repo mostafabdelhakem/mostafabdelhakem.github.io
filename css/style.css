@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: "DgBysen";
+  font-family: "Rubik", serif;
   line-height: 1.7;
   color: var(--text);
   background-color: var(--bg);
@@ -264,7 +264,6 @@ header {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 4px solid --light;
   object-fit: cover;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
@@ -337,8 +336,8 @@ header {
   }
 
   .icons {
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
   }
 }
 
@@ -348,7 +347,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
-  color: white;
+  color: var(--light);
   animation: bounce 2s infinite;
 }
 
@@ -488,7 +487,7 @@ h2::after {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   background: var(--secondary);
-  color: white !important;
+  color: var(--light) !important;
   border-radius: 50px;
   transition: all 0.3s;
 }
@@ -536,10 +535,10 @@ h2::after {
     font-size: 1.1rem;
   }
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   a {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
@@ -593,11 +592,11 @@ h2::after {
   bottom: 2rem;
   right: 2rem;
   background: var(--primary);
-  color: white;
+  color: var(--light);
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   display: none;
   transition: all 0.3s;
