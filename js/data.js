@@ -174,7 +174,6 @@ const portfolioData = {
     {
       name: "Backend Web Development Training",
       place: "Information Technology Institute (ITI)",
-      place: "Information Technology Institute (ITI)",
       date: "Feb 2023",
     },
     {
@@ -190,19 +189,16 @@ const portfolioData = {
     {
       name: "Frontend Web Development Training",
       place: "Information Technology Institute (ITI)",
-      place: "LinkedIn Learning",
       date: "Sep 2022",
     },
     {
       name: "Artificial Intelligence Training",
       place: "Information Technology Institute (ITI)",
-      place: "LinkedIn Learning",
       date: "Sep 2021",
     },
     {
       name: "AI Foundation Learning",
       place: "IBM Skills Build for Students",
-      place: "LinkedIn Learning",
       date: "Aug 2021",
     },
   ],
