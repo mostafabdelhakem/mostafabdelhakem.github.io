@@ -11,10 +11,24 @@
         content="Mostafa Abdelhakem - Software Engineer and Web Developer. Explore my portfolio to see my skills, projects, and experience.">
     <meta name="keywords" content="Mostafa Abdelhakem, Software Engineer, Web Developer, Portfolio">
     <meta name="author" content="Mostafa Abdelhakem">
+
+    <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Mostafa Abdelhakem - Portfolio">
     <meta property="og:description" content="Software Engineer and Web Developer Portfolio">
     <meta property="og:image" content="assets/photo.jpg">
     <meta property="og:url" content="https://mostafabdelhakem.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mostafa Abdelhakem - Portfolio">
+    <meta name="twitter:description" content="Software Engineer and Web Developer Portfolio">
+    <meta name="twitter:image" content="assets/photo.jpg">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="assets/photo.jpg" as="image">
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,70 +37,123 @@
         rel="stylesheet">
 
     <!-- Rest -->
-    <title>Mostafa Abdelhakem</title>
+    <title>Mostafa Abdelhakem - Software Engineer</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/sphoto.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mostafa Abdelhakem",
+        "url": "https://mostafabdelhakem.github.io",
+        "image": "assets/photo.jpg",
+        "sameAs": [
+            "https://www.linkedin.com/in/mostafabdelhakem",
+            "https://github.com/mostafabdelhakem",
+            "https://www.youtube.com/@mostafabdelhakem",
+            "https://www.facebook.com/mostafabdelhakem",
+            "https://www.instagram.com/mostafabdelhakem/"
+        ],
+        "jobTitle": "Software Engineer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Your Company Name"
+        }
+    }
+    </script>
 </head>
 
 <body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Loading effect -->
-    <div id="loading">
+    <div id="loading" role="progressbar" aria-label="Loading">
         <div class="loader"></div>
     </div>
     <!-- Navbar -->
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <button id="menu-toggle" aria-label="Toggle menu">
+            <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
             </button>
-            <div id="menu-overlay" class="menu-overlay"></div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#volunteering">Volunteering</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div id="menu-overlay" class="menu-overlay" role="presentation"></div>
+            <ul class="nav-links" id="nav-links" role="menubar">
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#volunteering" role="menuitem">Volunteering</a></li>
+                <li role="none"><a href="#courses" role="menuitem">Courses</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
     <!-- About -->
-    <header id="about">
+    <header id="about" role="banner">
         <div class="container">
             <div class="header-content">
                 <img src="assets/photo.jpg" alt="Mostafa Abdelhakem" class="profile-image" id="profile-image"
                     loading="lazy">
                 <div class="profile-info">
                     <h1>Mostafa Abdelhakem</h1>
-                    <h3 class="typewriter"></h3>
+                    <h3 class="typewriter" aria-live="polite"></h3>
                     <div class="contact-links">
-                        <a href="mailto:mostafaabdelhakem7@gmail.com" class="contact-link"><img class="icons"
-                                src="assets/icons/gmail.png" alt=""> Email</a>
-                        <a href="https://www.linkedin.com/in/mostafabdelhakem" class="contact-link"><img class="icons"
+                        <a href="mailto:mostafaabdelhakem7@gmail.com" class="contact-link"
+                            aria-label="Email Mostafa Abdelhakem"><img class="icons" src="assets/icons/gmail.png"
+                                alt=""> Email</a>
+                        <a href="https://www.linkedin.com/in/mostafabdelhakem" class="contact-link"
+                            aria-label="Visit Mostafa Abdelhakem's LinkedIn profile"><img class="icons"
                                 src="assets/icons/linkedin.png" alt="">LinkedIn</a>
-                        <a href="https://github.com/mostafabdelhakem" class="contact-link"><img class="icons"
+                        <a href="https://github.com/mostafabdelhakem" class="contact-link"
+                            aria-label="Visit Mostafa Abdelhakem's GitHub profile"><img class="icons"
                                 src="assets/icons/github.png" alt="">GitHub</a>
-                        <a href="https://www.youtube.com/@mostafabdelhakem" class="contact-link"><img class="icons"
+                        <a href="https://www.youtube.com/@mostafabdelhakem" class="contact-link"
+                            aria-label="Visit Mostafa Abdelhakem's YouTube channel"><img class="icons"
                                 src="assets/icons/youtube.png" alt="">YouTube</a>
-                        <a href="https://www.facebook.com/mostafabdelhakem" class="contact-link"><img class="icons"
+                        <a href="https://www.facebook.com/mostafabdelhakem" class="contact-link"
+                            aria-label="Visit Mostafa Abdelhakem's Facebook profile"><img class="icons"
                                 src="assets/icons/facebook.png" alt="">Facebook</a>
-                        <a href="https://www.instagram.com/mostafabdelhakem/" class="contact-link"><img class="icons"
+                        <a href="https://www.instagram.com/mostafabdelhakem/" class="contact-link"
+                            aria-label="Visit Mostafa Abdelhakem's Instagram profile"><img class="icons"
                                 src="assets/icons/instagram.png" alt="">Instagram</a>
                     </div>
                 </div>
             </div>
             <!-- Scroll Indicator -->
-            <div class="scroll-indicator">
+            <div class="scroll-indicator" role="presentation">
                 <span> ↓ </span>
             </div>
         </div>
     </header>
 
     <!-- Main content -->
-    <main class="container">
+    <main id="main-content" class="container">
         <section id="skills">
             <h2>Technical Skills</h2>
             <div class="skills" id="skills-container"></div>
@@ -125,10 +192,10 @@
     </main>
 
     <!-- Move up button -->
-    <button id="back-to-top" class="back-to-top"> ↑ </button>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top"> ↑ </button>
 
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="social-links">
                 <a href="mailto:mostafaabdelhakem7@gmail.com"><img src="assets/icons/bmail.png" alt="mail"></a>
@@ -149,7 +216,6 @@
 
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
-    <a href="" target="_blank"></a>
 </body>
 
 </html>

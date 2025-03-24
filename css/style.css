@@ -1,5 +1,6 @@
 /* ======== 1. Root Variables ======== */
 :root {
+  /* Light theme variables */
   --primary: #213555;
   --secondary: #4f709c;
   --accent: #e5d283;
@@ -7,6 +8,63 @@
   --gray: #6f8db4;
   --bg: #fffefe;
   --text: #19283e;
+  --focus-outline: 3px solid var(--accent);
+  --focus-outline-offset: 2px;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --card-bg: var(--bg);
+  --section-bg: var(--light);
+  --input-bg: var(--bg);
+  --input-border: var(--secondary);
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --primary: #90a4c6;
+  --secondary: #2a3b58;
+  --accent: #d4af37;
+  --light: #1e1e1e;
+  --gray: #a0aec0;
+  --bg: #121212;
+  --text: #e0e0e0;
+  --focus-outline: 3px solid var(--accent);
+  --focus-outline-offset: 2px;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --transition: all 0.3s ease;
+  --card-bg: #1a1a1a;
+  --section-bg: #222222;
+  --input-bg: #1e1e1e;
+  --input-border: var(--secondary);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1002;
+  background: var(--primary);
+  color: var(--bg);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background: var(--secondary);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* ======== 2. Global Reset & Base Styles ======== */
@@ -14,6 +72,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Focus styles for accessibility */
+:focus {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary);
+  color: var(--light);
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 html {
@@ -25,7 +114,7 @@ body {
   line-height: 1.7;
   color: var(--text);
   background-color: var(--bg);
-  transition: background-color 0.3s, color 0.3s;
+  transition: var(--transition);
 }
 
 html,
@@ -45,10 +134,7 @@ body {
 /* ======== 3. Loading Animation ======== */
 #loading {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: var(--bg);
   display: flex;
   justify-content: center;
@@ -58,7 +144,7 @@ body {
 
 .loader {
   border: 4px solid var(--primary);
-  border-top: 4px solid var(--accent);
+  border-top-color: var(--accent);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -66,10 +152,7 @@ body {
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }
@@ -78,12 +161,12 @@ body {
 #navbar {
   position: sticky;
   top: 0;
-  background: var(--light);
+  background: var(--section-bg);
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 #navbar.scroll-down {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 .nav-links {
@@ -95,10 +178,10 @@ body {
 }
 
 .nav-links a {
-  color: var(--primary);
+  color: var(--text);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: var(--transition);
 }
 
 .nav-links a:hover {
@@ -121,7 +204,7 @@ body {
   height: 3px;
   background: var(--primary);
   margin: 5px 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: var(--transition);
 }
 
 /* Hamburger Animation */
@@ -139,10 +222,7 @@ body {
 /* Overlay for mobile menu */
 .menu-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
   display: none;
@@ -168,13 +248,12 @@ body {
 @media (max-width: 768px) {
   .nav-links {
     display: none;
-    flex-direction: column;
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
     background: var(--light);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     padding: 1rem;
     z-index: 1000;
     flex-direction: column;
@@ -184,28 +263,27 @@ body {
 
   .nav-links.active {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--bg);
-    padding: 1rem;
-  }
-
-  .nav-links li {
-    margin: 0.5rem 0;
   }
 
   .nav-links a {
-    color: var(--primary);
-    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem;
     border-radius: 8px;
-    transition: background 0.3s ease;
+    transition: var(--transition);
   }
 
-  .nav-links a:hover {
-    background: rgba(79, 112, 156, 0.1);
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: rgba(79, 112, 156, 0.1);
+  }
+
+  /* Improved touch targets */
+  .nav-links a,
+  .contact-link,
+  button {
+    min-height: 44px;
+    min-width: 44px;
   }
 
   #menu-toggle {
@@ -221,9 +299,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   min-height: 100vh;
-  box-sizing: border-box;
   text-align: center;
   flex-direction: column;
 }
@@ -233,8 +309,8 @@ header {
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
   display: block;
   margin: 0 auto;
 }
@@ -264,12 +340,10 @@ header {
 .contact-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem; /* Increase the gap between items */
-  margin-top: 2rem;
+  gap: 1.5rem;
+  margin: 2rem auto 0;
   justify-content: center;
-  max-width: 80%; /* Allow it to take more space */
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 80%;
 }
 
 .contact-links a {
@@ -286,7 +360,7 @@ header {
   padding: 0.8rem 1.5rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 .contact-links a:hover {
@@ -305,7 +379,7 @@ header {
     text-align: center;
     align-items: center;
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
   }
 
   .profile-image {
@@ -382,9 +456,9 @@ header {
 section {
   margin: 4rem 0;
   padding: 2rem;
-  background: var(--light);
+  background: var(--section-bg);
   border-radius: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow);
 }
 h1 {
   margin-top: 1rem;
@@ -395,8 +469,11 @@ h3 {
   color: var(--text);
   position: relative;
   padding-bottom: 0.5rem;
-  font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 h3 {
@@ -435,13 +512,13 @@ h2::after {
 }
 
 .skill-tag {
-  background: var(--bg);
+  background: var(--card-bg);
   color: var(--text);
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   font-size: 0.9rem;
   border: 2px solid var(--secondary);
-  transition: all 0.3s;
+  transition: var(--transition);
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -486,8 +563,8 @@ h2::after {
   margin-bottom: 2rem;
   padding: 1rem;
   border-radius: 12px;
-  background: var(--bg);
-  transition: all 0.3s;
+  background: var(--card-bg);
+  transition: var(--transition);
 }
 
 .experience-item:hover,
@@ -495,7 +572,7 @@ h2::after {
 .course:hover,
 .volunteering:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 .project-link {
@@ -505,7 +582,8 @@ h2::after {
   background: var(--secondary);
   color: var(--light) !important;
   border-radius: 50px;
-  transition: all 0.3s;
+  transition: var(--transition);
+  text-decoration: none;
 }
 
 .project-link:hover {
@@ -525,7 +603,7 @@ h2::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: var(--transition);
 }
 
 .project-image:hover {
@@ -574,9 +652,9 @@ h2::after {
 #contact-form input,
 #contact-form textarea {
   padding: 0.75rem;
-  border: 2px solid var(--secondary);
+  border: 2px solid var(--input-border);
   border-radius: 8px;
-  background: var(--bg);
+  background: var(--input-bg);
   color: var(--text);
 }
 
@@ -588,7 +666,7 @@ h2::after {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: var(--transition);
 }
 
 #contact-form button:hover {
@@ -616,12 +694,11 @@ h2::after {
   height: 40px;
   cursor: pointer;
   display: none;
-  transition: all 0.3s;
+  transition: var(--transition);
 }
 
 .back-to-top:hover {
   background: var(--secondary);
-  font-size: 1.1rem;
   transform: scale(1.1);
 }
 
@@ -643,7 +720,7 @@ footer {
 .social-links img {
   width: 24px;
   height: 24px;
-  transition: transform 0.3s;
+  transition: var(--transition);
 }
 
 .social-links img:hover {
@@ -682,4 +759,44 @@ footer {
 
 .animate {
   animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  :root {
+    --primary: CanvasText;
+    --secondary: CanvasText;
+    --accent: Highlight;
+    --light: Canvas;
+    --gray: CanvasText;
+    --bg: Canvas;
+    --text: CanvasText;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
 }
