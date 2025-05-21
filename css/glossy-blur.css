@@ -1,0 +1,161 @@
+/* Glossy Blur Effects for Different Sections */
+
+/* Common glossy blur base */
+.glossy-section {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.glossy-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.7;
+  transition: var(--transition);
+  pointer-events: none;
+}
+
+/* Hero Section Glossy Effect */
+.hero.glossy-section::before {
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(var(--primary-rgb), 0.15) 0%,
+    rgba(var(--secondary-rgb), 0.05) 70%
+  );
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+}
+
+/* Skills Section Glossy Effect */
+#skills.glossy-section::before {
+  background: radial-gradient(
+    circle at 70% 20%,
+    rgba(var(--accent-rgb), 0.1) 0%,
+    rgba(var(--primary-rgb), 0.05) 60%
+  );
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+/* Experience Section Glossy Effect */
+#experience.glossy-section::before {
+  background: radial-gradient(
+    circle at 20% 80%,
+    rgba(var(--secondary-rgb), 0.1) 0%,
+    rgba(var(--primary-rgb), 0.05) 60%
+  );
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+/* Projects Section Glossy Effect */
+#projects.glossy-section::before {
+  background: radial-gradient(
+    circle at 80% 40%,
+    rgba(var(--primary-rgb), 0.1) 0%,
+    rgba(var(--secondary-rgb), 0.05) 70%
+  );
+  backdrop-filter: blur(45px);
+  -webkit-backdrop-filter: blur(45px);
+}
+
+/* Education Section Glossy Effect */
+#education.glossy-section::before {
+  background: radial-gradient(
+    circle at 40% 60%,
+    rgba(var(--accent-rgb), 0.08) 0%,
+    rgba(var(--primary-rgb), 0.04) 65%
+  );
+  backdrop-filter: blur(55px);
+  -webkit-backdrop-filter: blur(55px);
+}
+
+/* Volunteering Section Glossy Effect */
+#volunteering.glossy-section::before {
+  background: radial-gradient(
+    circle at 60% 30%,
+    rgba(var(--secondary-rgb), 0.08) 0%,
+    rgba(var(--primary-rgb), 0.04) 65%
+  );
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+}
+
+/* Contact Section Glossy Effect */
+#contact.glossy-section::before {
+  background: radial-gradient(
+    circle at 30% 70%,
+    rgba(var(--primary-rgb), 0.1) 0%,
+    rgba(var(--secondary-rgb), 0.05) 60%
+  );
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+/* Hover effects for glossy sections */
+.glossy-section:hover::before {
+  opacity: 0.9;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .glossy-section::before {
+  opacity: 0.5;
+}
+
+[data-theme="dark"] .glossy-section:hover::before {
+  opacity: 0.7;
+}
+
+/* Floating elements for enhanced visual effect */
+.floating-element {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: -1;
+  opacity: 0.4;
+  animation: float 8s ease-in-out infinite;
+}
+
+.floating-element-1 {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(var(--primary-rgb), 0.2);
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.floating-element-2 {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(var(--secondary-rgb), 0.15);
+  bottom: -50px;
+  left: -50px;
+  animation-delay: 2s;
+}
+
+.floating-element-3 {
+  width: 250px;
+  height: 250px;
+  background-color: rgba(var(--accent-rgb), 0.1);
+  top: 40%;
+  left: -100px;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}

@@ -1,0 +1,448 @@
+/**
+ * Portfolio Data File
+ *
+ * This file contains all the structured data used to render the portfolio website.
+ * It includes roles, skills, experience, education, certifications, projects, and volunteering.
+ *
+ * Sections:
+ * 1. Roles (for hero section/typewriter)
+ * 2. Skills (grouped by category)
+ * 3. Experience (work history)
+ * 4. Education
+ * 5. Certifications
+ * 6. Projects (portfolio showcase)
+ * 7. Volunteering
+ */
+
+/**
+ * @typedef {Object} Skill
+ * @property {string} name
+ * @property {string} category
+ */
+
+/**
+ * @typedef {Object} Experience
+ * @property {string} title
+ * @property {string} company
+ * @property {string} period
+ * @property {string} description
+ */
+
+/**
+ * @typedef {Object} Education
+ * @property {string} degree
+ * @property {string} institution
+ * @property {string} period
+ * @property {string} location
+ * @property {string} grade
+ */
+
+/**
+ * @typedef {Object} Certification
+ * @property {string} title
+ * @property {string} issuer
+ * @property {string} date
+ * @property {string} credentialUrl
+ * @property {string} description
+ * @property {string} category
+ */
+
+/**
+ * @typedef {Object} Project
+ * @property {string} title
+ * @property {string} description
+ * @property {string[]} technologies
+ * @property {string} githubLink
+ * @property {string} liveLink
+ * @property {string} image
+ * @property {string} category
+ */
+
+/**
+ * @typedef {Object} Volunteering
+ * @property {string} title
+ * @property {string} organization
+ * @property {string} period
+ * @property {string} description
+ */
+
+/**
+ * Main portfolio data object.
+ * @type {{
+ *   roles: string[],
+ *   skills: Skill[],
+ *   experience: Experience[],
+ *   education: Education[],
+ *   certifications: Certification[],
+ *   projects: Project[],
+ *   volunteering: Volunteering[]
+ * }}
+ */
+const portfolioData = {
+  // =========================
+  // 1. Roles (for hero section/typewriter)
+  // =========================
+  roles: [
+    "Software Engineer",
+    "Full Stack Developer",
+    "Web Developer",
+    "Programming Instructor",
+    "Problem Solver",
+  ],
+
+  // =========================
+  // 2. Skills (grouped by category)
+  // =========================
+  skills: [
+    // --- Frontend Development ---
+    { name: "Angular", category: "frontend" },
+    { name: "Bootstrap", category: "frontend" },
+    { name: "CSS3", category: "frontend" },
+    { name: "HTML5", category: "frontend" },
+    { name: "JavaScript", category: "frontend" },
+    { name: "Next.js", category: "frontend" },
+    { name: "React", category: "frontend" },
+    { name: "Responsive Design", category: "frontend" },
+    { name: "Sass", category: "frontend" },
+    { name: "Tailwind CSS", category: "frontend" },
+    { name: "TypeScript", category: "frontend" },
+
+    // --- Backend Development ---
+    { name: "Express.js", category: "backend" },
+    { name: "JsonServer", category: "backend" },
+    { name: "MongoDB", category: "backend" },
+    { name: "MySQL", category: "backend" },
+    { name: "Node.js", category: "backend" },
+    { name: "RESTful APIs", category: "backend" },
+    { name: "SQL", category: "backend" },
+
+    // --- Programming Languages ---
+    { name: "C#", category: "language" },
+    { name: "C++", category: "language" },
+    { name: "Java", category: "language" },
+    { name: "JavaScript", category: "language" },
+    { name: "Python", category: "language" },
+    { name: "TypeScript", category: "language" },
+
+    // --- Software Engineering ---
+    { name: "Algorithms", category: "engineering" },
+    { name: "Data Structures", category: "engineering" },
+    { name: "Design Patterns", category: "engineering" },
+    { name: "Object-Oriented Programming", category: "engineering" },
+
+    // --- AI & Education ---
+    { name: "AI Curriculum Development", category: "ai" },
+    { name: "Computational Thinking", category: "ai" },
+    { name: "Educational Assessment", category: "ai" },
+
+    // --- Data Analysis ---
+    { name: "Data Visualization", category: "data" },
+    { name: "Matplotlib", category: "data" },
+    { name: "Networkx", category: "data" },
+    { name: "Pandas", category: "data" },
+    { name: "Power BI", category: "data" },
+
+    // --- Tools & Platforms ---
+    { name: "Figma", category: "tools" },
+    { name: "Git", category: "tools" },
+    { name: "GitHub", category: "tools" },
+    { name: "Postman", category: "tools" },
+    { name: "Vite", category: "tools" },
+    { name: "VS Code", category: "tools" },
+  ],
+
+  // =========================
+  // 3. Experience (work history)
+  // =========================
+  experience: [
+    {
+      title: "Programming Instructor | Web Development Mentor",
+      company: "Timedoor Academy",
+      period: "August 2024 - Present",
+      description:
+        "I educate and mentor students aged 5-18 in various technologies including Scratch, robotics, frontend development, and app development. I design and implement an AI curriculum introducing foundational concepts through age-appropriate activities, while creating project-based learning modules demonstrating real-world AI applications. Using data analytics, I develop personalized learning paths to identify individual student needs. I conduct interactive classes and guide students through coding projects to develop problem-solving skills, and prepare detailed progress reports analyzing student achievements.",
+    },
+    {
+      title: "Community Manager",
+      company: "E-Spaces",
+      period: "May 2023 - March 2024",
+      description:
+        "I managed community relations and day-to-day operations, ensuring clients had access to well-organized and functional office spaces. Working closely with clients, I met their needs and streamlined processes to enhance the overall customer experience. I coordinated facility management, maintained a professional environment for all members, and implemented feedback systems to continuously improve service quality.",
+    },
+  ],
+
+  // =========================
+  // 4. Education
+  // =========================
+  education: [
+    {
+      degree: "Bachelor of Electrical Systems and Computer Engineering",
+      institution: "Al Azhar University",
+      period: "2019 - 2024",
+      location: "Cairo, Egypt",
+      grade: "Very Good",
+    },
+  ],
+
+  // =========================
+  // 5. Certifications
+  // =========================
+  certifications: [
+    // --- Technical Certifications ---
+    {
+      title: "Backend Web Development Training",
+      issuer: "Information Technology Institute (ITI)",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Mastered server-side programming, database management, and API development for robust web applications.",
+      category: "Technical Certifications",
+    },
+    {
+      title: "Become a Software Developer",
+      issuer: "LinkedIn Learning",
+      date: "2022",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Developed foundational programming skills and software development methodologies for building production-ready applications.",
+      category: "Technical Certifications",
+    },
+    {
+      title: "Developing Web Application using PHP",
+      issuer: "Information Technology Institute (ITI)",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Trained in building dynamic web applications using PHP, including database integration, security best practices, and MVC architecture.",
+      category: "Technical Certifications",
+    },
+    {
+      title: "Frontend Web Development Training",
+      issuer: "Information Technology Institute (ITI)",
+      date: "2022",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Completed 138 hours of intensive training covering modern frontend technologies, frameworks, and responsive design principles.",
+      category: "Technical Certifications",
+    },
+    {
+      title: "Git & GitHub",
+      issuer: "Al Madras",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Learned version control best practices, collaborative workflows, and advanced Git techniques for efficient team development.",
+      category: "Technical Certifications",
+    },
+    {
+      title: "Microsoft Certified: Azure Fundamentals",
+      issuer: "Microsoft",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Validated understanding of cloud concepts, Azure services, security, privacy, compliance, and trust.",
+      category: "Technical Certifications",
+    },
+    {
+      title: "AWS Certified Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Demonstrated foundational knowledge of AWS cloud architecture, services, security, and compliance.",
+      category: "Technical Certifications",
+    },
+    {
+      title: "Google Project Management Certificate",
+      issuer: "Google",
+      date: "2022",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Mastered project management fundamentals including Agile methodologies, risk management, and team leadership.",
+      category: "Technical Certifications",
+    },
+    {
+      title: "JavaScript Algorithms and Data Structures",
+      issuer: "freeCodeCamp",
+      date: "2022",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Completed comprehensive curriculum covering JavaScript fundamentals, algorithms, and data structures.",
+      category: "Technical Certifications",
+    },
+    {
+      title: "The Complete JavaScript Course from Zero to Expert",
+      issuer: "Udemy",
+      date: "2024",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Comprehensive JavaScript training covering fundamentals, advanced concepts, and modern ES6+ features for web development.",
+      category: "Technical Certifications",
+    },
+
+    // --- AI & Data Certifications ---
+    {
+      title: "AI Foundation Learning",
+      issuer: "IBM Skills Build for Students",
+      date: "2021",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Established core understanding of AI concepts, including machine learning, neural networks, and practical applications.",
+      category: "AI & Data Certifications",
+    },
+    {
+      title: "Artificial Intelligence Training",
+      issuer: "Information Technology Institute (ITI)",
+      date: "2021",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Completed 60 hours of AI training covering machine learning fundamentals, neural networks, and practical AI implementation.",
+      category: "AI & Data Certifications",
+    },
+    {
+      title: "Career Essentials in Data Analysis",
+      issuer: "Microsoft and LinkedIn Learning",
+      date: "2025",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Gained proficiency in data analysis methodologies, visualization techniques, and analytical tools for business insights.",
+      category: "AI & Data Certifications",
+    },
+    {
+      title: "Essentials of AI Agents",
+      issuer: "Almdrasa",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Explored autonomous AI agent development, including architecture, behavior design, and practical implementation strategies.",
+      category: "AI & Data Certifications",
+    },
+    {
+      title: "Essentials of ChatGPT",
+      issuer: "Al Madrasa",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Learned effective prompt engineering, use cases, and integration strategies for leveraging conversational AI technology.",
+      category: "AI & Data Certifications",
+    },
+    {
+      title: "Learning Data Analytics",
+      issuer: "LinkedIn Learning",
+      date: "2025",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Mastered data analysis workflows, statistical methods, and visualization techniques for extracting meaningful insights.",
+      category: "AI & Data Certifications",
+    },
+    {
+      title: "Learning SQL Programming",
+      issuer: "LinkedIn Learning",
+      date: "2022",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Gained proficiency in SQL query writing, database design, and data manipulation for efficient information retrieval.",
+      category: "AI & Data Certifications",
+    },
+    {
+      title: "One Million Prompters",
+      issuer: "Dubai Future Foundation",
+      date: "2025",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Developed expertise in prompt engineering for AI systems, including optimization techniques for generative AI platforms.",
+      category: "AI & Data Certifications",
+    },
+    {
+      title: "UI/UX Design for Educational Applications",
+      issuer: "Self-paced learning",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Developed specialized design skills for creating intuitive, accessible educational interfaces and learning experiences.",
+      category: "AI & Data Certifications",
+    },
+
+    // --- Professional Development ---
+    {
+      title: "Building Resilience",
+      issuer: "LinkedIn Learning",
+      date: "2022",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Learned strategies for developing mental toughness, adaptability, and effective stress management in professional settings.",
+      category: "Professional Development",
+    },
+    {
+      title: "Critical Thinking for Better Judgment and Decision-Making",
+      issuer: "LinkedIn Learning",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Developed advanced analytical thinking, logical reasoning, and structured decision-making approaches for complex problems.",
+      category: "Professional Development",
+    },
+    {
+      title: "Designing Project-Based Learning Experiences",
+      issuer: "Self-paced learning",
+      date: "2024",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Developed skills for creating engaging, outcome-oriented learning projects that promote practical skill development.",
+      category: "Professional Development",
+    },
+    {
+      title: "Differentiated Instruction in STEM",
+      issuer: "Professional development",
+      date: "2024",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Mastered techniques for personalizing STEM instruction to meet diverse learning needs and maximize student engagement.",
+      category: "Professional Development",
+    },
+    {
+      title: "McKinsey Forward Program",
+      issuer: "McKinsey",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Developed leadership skills, strategic thinking, and problem-solving methodologies used by top management consultants.",
+      category: "Professional Development",
+    },
+    {
+      title: "Professional Soft Skills Learning Pathway",
+      issuer: "LinkedIn",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Enhanced communication, collaboration, and interpersonal skills essential for professional success in technology teams.",
+      category: "Professional Development",
+    },
+    {
+      title: "Teamwork Foundations",
+      issuer: "LinkedIn Learning",
+      date: "2023",
+      credentialUrl: "https://www.linkedin.com/in/mostafabdelhakem/",
+      description:
+        "Mastered effective collaboration techniques, conflict resolution, and team communication strategies for project success.",
+      category: "Professional Development",
+    },
+  ],
+
+  // =========================
+  // 6. Projects (portfolio showcase)
+  // =========================
+  projects: [
+    // ...existing code...
+  ],
+
+  // =========================
+  // 7. Volunteering
+  // =========================
+  volunteering: [
+    // ...existing code...
+  ],
+};
+
+// Uncomment if using modules
+// export default portfolioData;

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ==================== Meta Tags ====================
+        Sets character encoding, viewport, SEO, and author information.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mostafa Abdelhakem - Software Engineer, Web Developer, and Programming Instructor">
+    <meta name="keywords"
+        content="Mostafa Abdelhakem, Software Engineer, Web Developer, Portfolio, Programming Instructor">
+    <meta name="author" content="Mostafa Abdelhakem">
+
+    <!-- ========== Open Graph / Social Media ==========
+        Provides rich preview for social media sharing.
+    -->
+    <meta property="og:title" content="Mostafa Abdelhakem">
+    <meta property="og:description" content="Software Engineer, Web Developer, and Programming Instructor">
+    <meta property="og:image" content="assets/photo.jpg">
+    <meta property="og:url" content="https://mostafabdelhakem.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- ========== Preload Critical Resources ==========
+        Improves performance by preloading essential CSS, JS, and images.
+    -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="assets/photo.jpg" as="image">
+
+    <!-- ========== Fonts ==========
+        Loads Google Fonts for typography.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ========== Stylesheets & Icons ==========
+        Loads main styles, project-specific styles, and favicon.
+    -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-styles.css">
+    <link rel="stylesheet" href="css/project-buttons.css">
+    <link rel="stylesheet" href="css/glossy-blur.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/photo.jpg">
+
+    <!-- ========== Font Awesome ==========
+        Loads icon library for UI icons.
+    -->
+    <script src="https://kit.fontawesome.com/b444972554.js" crossorigin="anonymous"></script>
+
+    <title>Mostafa Abdelhakem</title>
+</head>
+
+<body>
+    <!-- ==================== Accessibility: Skip Link ====================
+        Allows keyboard users to skip directly to main content.
+    -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ==================== Loading Animation (Optional) ====================
+        Displays a loading spinner while the page is initializing.
+    -->
+    <div id="loading" role="progressbar" aria-label="Loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- ==================== Header ====================
+        Contains site logo, navigation links, mobile menu toggle, and theme toggle.
+    -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                Mostafa<span>Abdelhakem</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ==================== Hero Section ====================
+        Introduction, typewriter effect, and call-to-action buttons.
+    -->
+    <section class="hero glossy-section" id="about">
+        <div class="floating-element floating-element-1"></div>
+        <div class="floating-element floating-element-2"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm Mostafa Abdelhakem</h1>
+                <div class="typewriter" aria-live="polite"></div>
+                <p class="hero-subtitle">
+                    Versatile technology professional with expertise in software engineering, web development, and
+                    technology education.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn btn-outline">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== Main Content ====================
+        Contains all main portfolio sections.
+    -->
+    <main id="main-content">
+
+        <!-- ========== Skills Section ==========
+            Displays categorized technical skills.
+        -->
+        <section class="section glossy-section" id="skills">
+            <div class="floating-element floating-element-3"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My <span class="text-gradient">Skills</span></h2>
+                    <p class="section-subtitle">
+                        A comprehensive set of skills I've developed throughout my career in software engineering and
+                        web development.
+                    </p>
+                </div>
+                <div class="skills-categories" id="skills-categories">
+                    <!-- Skill categories will be populated by JavaScript -->
+                </div>
+                <div class="skills-container" id="skills-container">
+                    <!-- Skills will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Experience Section ==========
+            Shows professional work experience.
+        -->
+        <section class="section glossy-section" id="experience">
+            <div class="floating-element floating-element-2"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional <span class="text-gradient">Experience</span></h2>
+                    <p class="section-subtitle">
+                        My professional journey and the roles I've taken on throughout my career.
+                    </p>
+                </div>
+                <div class="grid" id="experience-container">
+                    <!-- Experience cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Projects Section ==========
+            Portfolio of featured projects with filtering.
+        -->
+        <section class="section glossy-section" id="projects">
+            <div class="floating-element floating-element-1"></div>
+            <div class="floating-element floating-element-3"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                    <p class="section-subtitle">
+                        A selection of my work across various technologies and domains.
+                    </p>
+                </div>
+                <div class="project-categories" id="project-categories">
+                    <!-- Project category buttons will be populated by JavaScript -->
+                </div>
+                <div class="grid" id="projects-container">
+                    <!-- Project cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Education Section ==========
+            Academic background and certifications.
+        -->
+        <section class="section glossy-section" id="education">
+            <div class="floating-element floating-element-2"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Education & <span class="text-gradient">Certifications</span></h2>
+                    <p class="section-subtitle">
+                        My academic background and professional development journey.
+                    </p>
+                </div>
+                <div class="grid" id="education-container">
+                    <!-- Education cards will be populated by JavaScript -->
+                </div>
+                <div class="section-header mt-5">
+                    <h3>Professional Certifications</h3>
+                </div>
+                <div class="certifications-categories" id="certifications-categories">
+                    <!-- Certification categories will be populated by JavaScript -->
+                </div>
+                <div class="grid" id="certifications-container">
+                    <!-- Certification cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Volunteering Section ==========
+            Community and leadership experience.
+        -->
+        <section class="section glossy-section" id="volunteering">
+            <div class="floating-element floating-element-3"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Volunteering <span class="text-gradient">Experience</span></h2>
+                    <p class="section-subtitle">
+                        My contributions to communities and organizations.
+                    </p>
+                </div>
+                <div class="grid" id="volunteering-container">
+                    <!-- Volunteering cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Contact Section ==========
+            Contact form and social links.
+        -->
+        <section class="section glossy-section" id="contact">
+            <div class="floating-element floating-element-1"></div>
+            <div class="floating-element floating-element-2"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get in <span class="text-gradient">Touch</span></h2>
+                    <p class="section-subtitle">
+                        Have a project in mind or want to collaborate? Feel free to reach out!
+                    </p>
+                </div>
+                <div class="contact-container">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:mostafaabdelhakem7@gmail.com">mostafaabdelhakem7@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/mostafabdelhakem" class="social-link"
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/mostafabdelhakem" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@mostafabdelhakem" class="social-link"
+                                aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.facebook.com/mostafabdelhakem" class="social-link"
+                                aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/mostafabdelhakem/" class="social-link"
+                                aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+                            <p id="form-status" class="form-status"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== Back to Top Button ====================
+        Scrolls the page smoothly to the top.
+    -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ==================== Footer ====================
+        Contains site info, quick links, and social links.
+    -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <a href="#" class="footer-logo">Mostafa<span class="text-gradient">Abdelhakem</span></a>
+                    <p class="footer-text">
+                        Software Engineer & Web Developer with a passion for creating impactful digital solutions and
+                        educating the next generation of technologists.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/mostafabdelhakem" class="social-link" aria-label="LinkedIn"
+                            target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/mostafabdelhakem" class="social-link" aria-label="GitHub"
+                            target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@mostafabdelhakem" class="social-link" aria-label="YouTube"
+                            target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/mostafabdelhakem" class="social-link" aria-label="Facebook"
+                            target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mostafabdelhakem/" class="social-link" aria-label="Instagram"
+                            target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about" class="footer-link">About</a></li>
+                        <li><a href="#skills" class="footer-link">Skills</a></li>
+                        <li><a href="#experience" class="footer-link">Experience</a></li>
+                        <li><a href="#projects" class="footer-link">Projects</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">More</h3>
+                    <ul class="footer-links">
+                        <li><a href="#education" class="footer-link">Education</a></li>
+                        <li><a href="#education" class="footer-link">Certifications</a></li>
+                        <li><a href="#volunteering" class="footer-link">Volunteering</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Mostafa Abdelhakem. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== Scripts ====================
+        Loads portfolio data and main JavaScript logic.
+    -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
