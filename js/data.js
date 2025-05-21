@@ -433,14 +433,234 @@ const portfolioData = {
   // 6. Projects (portfolio showcase)
   // =========================
   projects: [
-    // ...existing code...
+    // ===== Web Development Projects =====
+    {
+      title: "Dawini Medical Platform",
+      description:
+        "A medical platform connecting patients with various healthcare providers, facilitating appointments and healthcare services. I developed an adaptable and responsive user interface with React and Tailwind CSS, improved user experience and accessibility across devices.",
+      technologies: ["React", "Node.js", "MySQL", "MongoDB", "Tailwind CSS"],
+      githubLink: "https://github.com/mostafabdelhakem/dawini",
+      liveLink: "https://dawini-website.vercel.app/",
+      image: "./assets/projects/dawini.png",
+      category: "Web Development",
+    },
+    {
+      title: "MSP Tech Club Website",
+      description:
+        "The official website for MSP Tech Club at Al-Azhar, showcasing events, activities, and resources for the tech community. I directed strategy, content, and development as President of the Club, creating a central hub for our tech community.",
+      technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
+      githubLink: "",
+      liveLink: "https://msp-alazhar.tech",
+      image: "./assets/projects/msp.png",
+      category: "Web Development",
+    },
+    {
+      title: "Bankist Web App",
+      description:
+        "A modern banking application that allows users to manage accounts, view balances, transfer funds, and track transactions. I implemented secure user authentication and transaction processing, creating an intuitive interface for financial management.",
+      technologies: ["HTML", "CSS", "JavaScript", "Figma", "Node.js"],
+      githubLink: "https://github.com/mostafabdelhakem/Bankist-App",
+      liveLink: "https://bankist-app-xwto.onrender.com",
+      image: "./assets/projects/bankist.png",
+      category: "Web Development",
+    },
+    {
+      title: "Travel App Website",
+      description:
+        "A travel planning app that helps users explore destinations, check weather forecasts, and find essential travel information. I implemented responsive design for optimal viewing on all devices, creating a seamless experience for travelers planning their journeys.",
+      technologies: ["React", "TailwindCSS", "TypeScript"],
+      githubLink: "https://github.com/mostafabdelhakem/travel-app",
+      liveLink: "https://travel-app-ten-ashy.vercel.app/",
+      image: "./assets/projects/travel.png",
+      category: "Web Development",
+    },
+    {
+      title: "Notes Website",
+      description:
+        "A simple web app allowing users to create, edit, and delete notes with a clean and intuitive interface. I implemented data persistence using JsonServer and created responsive design for mobile and desktop use, ensuring a seamless note-taking experience.",
+      technologies: ["React", "CSS", "JavaScript", "JsonServer"],
+      githubLink: "https://github.com/mostafabdelhakem/notes-website",
+      liveLink: "https://notes-website-teal.vercel.app/",
+      image: "./assets/projects/notes.png",
+      category: "Web Development",
+    },
+    {
+      title: "CloudStack Project",
+      description:
+        "A cloud infrastructure management interface with responsive design principles and modern UI components. I implemented using SCSS for advanced styling and responsive design, creating an intuitive dashboard for cloud resource management.",
+      technologies: ["HTML", "SCSS", "JavaScript"],
+      githubLink: "https://github.com/mostafabdelhakem/CloudStack-Project",
+      liveLink: "https://cloud-stack-3h4f.onrender.com",
+      image: "./assets/projects/cloudStack.png",
+      category: "Web Development",
+    },
+    {
+      title: "ProductsStore",
+      description:
+        "An e-commerce platform with product catalog and shopping cart functionality. I implemented user authentication and product management features using the MERN stack, creating a complete online shopping experience.",
+      technologies: ["MongoDB", "Express.js", "React", "Node.js"],
+      githubLink: "https://github.com/mostafabdelhakem/ProductsStore",
+      liveLink: "https://productsstore-xrz4.onrender.com",
+      image: "./assets/projects/productsStore.png",
+      category: "Web Development",
+    },
+    {
+      title: "Portfolio Website",
+      description:
+        "My personal portfolio website showcasing my projects, skills, and professional experience. Built with modern web technologies and featuring a clean, responsive design.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      githubLink:
+        "https://github.com/mostafabdelhakem/mostafabdelhakem.github.io",
+      liveLink: "https://mostafabdelhakem.github.io/",
+      image: "./assets/projects/portfolio.png",
+      category: "Web Development",
+    },
+    {
+      title: "LandingPage",
+      description:
+        "A responsive landing page design using SASS for styling. Features modern design elements and smooth animations.",
+      technologies: ["HTML", "SCSS", "JavaScript"],
+      githubLink: "https://github.com/mostafabdelhakem/LandingPage",
+      liveLink: "https://landing-page-using-sass.onrender.com",
+      image: "./assets/projects/landing.png",
+      category: "Web Development",
+    },
+    {
+      title: "NOVA-LandingPage",
+      description:
+        "A modern landing page design with clean aesthetics and responsive layout.",
+      technologies: ["HTML", "SCSS", "JavaScript"],
+      githubLink: "https://github.com/mostafabdelhakem/NOVA-LandingPage",
+      liveLink: "https://nova-landing-page.onrender.com",
+      image: "./assets/projects/nova.png",
+      category: "Web Development",
+    },
+    {
+      title: "Readers-Shop",
+      description:
+        "A bookshop website built as an application of the Angular framework. Features product listings, shopping cart, and user authentication.",
+      technologies: ["Angular", "TypeScript", "CSS"],
+      githubLink: "https://github.com/mostafabdelhakem/Readers-Shop",
+      liveLink: "https://reders-shop.vercel.app/product",
+      image: "./assets/projects/readers.png",
+      category: "Web Development",
+    },
+
+    // ===== Games and Interactive Applications =====
+    {
+      title: "Pig Game",
+      description:
+        "A fun, interactive dice game built with JavaScript, where players take turns rolling the dice to reach the target score while avoiding risky rolls. I designed an engaging user interface with real-time score tracking and intuitive game mechanics.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      githubLink: "https://github.com/mostafabdelhakem/Pig-Game",
+      liveLink: "https://pig-game-fq3u.onrender.com",
+      image: "./assets/projects/pigGame.png",
+      category: "Games and Interactive Applications",
+    },
+    {
+      title: "Guess Number Game",
+      description:
+        "An interactive number guessing game where players try to guess the correct number within a given range, with hints provided after each guess. I created a scoring mechanism that rewards efficient guessing and designed an engaging user experience.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      githubLink: "https://github.com/mostafabdelhakem/Guess-Number-Game",
+      liveLink: "https://guess-number-game-mn2m.onrender.com",
+      image: "./assets/projects/guessNumber.png",
+      category: "Games and Interactive Applications",
+    },
+    {
+      title: "Ping-Pong App",
+      description:
+        "A classic ping-pong game developed while learning Python. I implemented game physics and scoring system, creating an entertaining and responsive gaming experience with smooth animations.",
+      technologies: ["Python"],
+      githubLink: "https://github.com/mostafabdelhakem/Ping-Pong-App",
+      liveLink: "",
+      image: "./assets/projects/pingPong.png",
+      category: "Games and Interactive Applications",
+    },
+
+    // ===== Data Science and Algorithm Projects =====
+    {
+      title: "Searching Algorithms",
+      description:
+        "Implementation of various searching algorithms in Python. I analyzed and compared algorithm efficiency and performance, creating visualizations to demonstrate the strengths and weaknesses of different approaches.",
+      technologies: ["Python", "Algorithms"],
+      githubLink: "https://github.com/mostafabdelhakem/Searching-Algorithms",
+      liveLink: "",
+      image: "./assets/projects/searching.png",
+      category: "Data Science and Algorithm Projects",
+    },
+    {
+      title: "Genetic Algorithms",
+      description:
+        "Application of genetic algorithms to solve optimization problems. Demonstrates evolutionary computation techniques and their applications.",
+      technologies: ["Python", "Algorithms"],
+      githubLink: "https://github.com/mostafabdelhakem/Genetic-Algorithms",
+      liveLink: "",
+      image: "./assets/projects/genetic.png",
+      category: "Data Science and Algorithm Projects",
+    },
+    {
+      title: "Breadth-first Strategy",
+      description:
+        "Implementation of the Breadth-First Search algorithm for graph traversal and pathfinding problems.",
+      technologies: ["Python", "Algorithms"],
+      githubLink: "https://github.com/mostafabdelhakem/Breadth-first-strategy",
+      liveLink: "",
+      image: "./assets/projects/breadthFirst.png",
+      category: "Data Science and Algorithm Projects",
+    },
+    {
+      title: "Drawing Graph",
+      description:
+        "Python project using matplotlib and networkx libraries to visualize and analyze graph structures.",
+      technologies: ["Python", "Matplotlib", "Networkx"],
+      githubLink: "https://github.com/mostafabdelhakem/drawing-graph",
+      liveLink: "",
+      image: "./assets/projects/drawingGraph.png",
+      category: "Data Science and Algorithm Projects",
+    },
+    {
+      title: "Data Frames",
+      description:
+        "Data science project demonstrating the use of pandas for data manipulation and analysis.",
+      technologies: ["Python", "Pandas"],
+      githubLink: "https://github.com/mostafabdelhakem/data-frames",
+      liveLink: "",
+      image: "./assets/projects/dataFrame.png",
+      category: "Data Science and Algorithm Projects",
+    },
   ],
 
   // =========================
   // 7. Volunteering
   // =========================
+  /**
+   * Array of volunteering experience objects.
+   * Each object contains title, organization, period, and description.
+   * @type {{title: string, organization: string, period: string, description: string}[]}
+   */
   volunteering: [
-    // ...existing code...
+    {
+      title: "President",
+      organization: "Microsoft Student Tech Club, Al Azhar University",
+      period: "2023 - 2024",
+      description:
+        "I led a 370-member organization, managing over 16 projects per season. I launched the club's first website and mobile app, enhancing our digital presence. I delivered more than 20 technical workshops reaching over 3,000 students, and doubled student engagement through innovative digital platforms and interactive learning methods.",
+    },
+    {
+      title: "Head of Technical Committee",
+      organization: "Microsoft Student Tech Club, Al Azhar University",
+      period: "2022 - 2023",
+      description:
+        "I managed over 100 members across seven technical tracks and developed simplified methodologies making complex AI concepts accessible to beginners. I organized technical workshops and training sessions for university students, focusing on practical skills development and hands-on learning experiences.",
+    },
+    {
+      title: "Microsoft Egypt Representative",
+      organization: "Microsoft",
+      period: "2023 - 2024",
+      description:
+        "I assisted in organizing and guiding attendees at Microsoft events held at Smart Campus and Galala University. I ensured smooth event organization and created positive experiences for university students, while sharing technology education resources with attendees. I represented Microsoft's educational initiatives at major campus events, promoting technology learning and skill development.",
+    },
   ],
 };
 
