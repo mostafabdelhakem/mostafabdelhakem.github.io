@@ -138,48 +138,6 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// ==================== 5. Typewriter Effect ====================
-/**
- * Animates the typewriter effect for the roles in the hero section.
- */
-function typewriterEffect() {
-  if (!typewriterElement) return;
-  const roles = portfolioData.roles;
-  let roleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let typingSpeed = 70;
-
-  function type() {
-    const currentRole = roles[roleIndex];
-    if (isDeleting) {
-      typewriterElement.innerHTML = `<span class="txt">${currentRole.substring(
-        0,
-        charIndex
-      )}</span>`;
-      charIndex--;
-      typingSpeed = 50;
-      if (charIndex < 0) {
-        isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-        typingSpeed = 200;
-      }
-    } else {
-      typewriterElement.innerHTML = `<span class="txt">${currentRole.substring(
-        0,
-        charIndex
-      )}</span>`;
-      charIndex++;
-      if (charIndex > currentRole.length) {
-        isDeleting = true;
-        typingSpeed = 100;
-      }
-    }
-    setTimeout(type, typingSpeed);
-  }
-  setTimeout(type, 500);
-}
-
 // ==================== 6. Skills Section ====================
 /**
  * Renders the skills section with category filtering.
@@ -561,7 +519,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 1000);
 
   // Initialize all sections and effects
-  typewriterEffect();
   renderSkills();
   renderExperience();
   renderProjects();

@@ -5,7 +5,6 @@
  * It includes roles, skills, experience, education, certifications, projects, and volunteering.
  *
  * Sections:
- * 1. Roles (for hero section/typewriter)
  * 2. Skills (grouped by category)
  * 3. Experience (work history)
  * 4. Education
@@ -69,7 +68,6 @@
 /**
  * Main portfolio data object.
  * @type {{
- *   roles: string[],
  *   skills: Skill[],
  *   experience: Experience[],
  *   education: Education[],
@@ -79,17 +77,6 @@
  * }}
  */
 const portfolioData = {
-  // =========================
-  // 1. Roles (for hero section/typewriter)
-  // =========================
-  roles: [
-    "Software Engineer",
-    "Full Stack Developer",
-    "Web Developer",
-    "Programming Instructor",
-    "Problem Solver",
-  ],
-
   // =========================
   // 2. Skills (grouped by category)
   // =========================
@@ -134,6 +121,18 @@ const portfolioData = {
     { name: "AI Curriculum Development", category: "ai" },
     { name: "Computational Thinking", category: "ai" },
     { name: "Educational Assessment", category: "ai" },
+    {
+      name: "Scratch Programming",
+      category: "ai",
+    } /* Added for K-12 tech education */,
+    {
+      name: "Robotics Education",
+      category: "ai",
+    } /* Added for hands-on learning */,
+    {
+      name: "Project-Based Learning",
+      category: "ai",
+    } /* Added to highlight teaching method */,
 
     // --- Data Analysis ---
     { name: "Data Visualization", category: "data" },
@@ -141,6 +140,10 @@ const portfolioData = {
     { name: "Networkx", category: "data" },
     { name: "Pandas", category: "data" },
     { name: "Power BI", category: "data" },
+    {
+      name: "Data Analytics for Education",
+      category: "data",
+    } /* Added to emphasize teaching application */,
 
     // --- Tools & Platforms ---
     { name: "Figma", category: "tools" },
@@ -149,6 +152,10 @@ const portfolioData = {
     { name: "Postman", category: "tools" },
     { name: "Vite", category: "tools" },
     { name: "VS Code", category: "tools" },
+    {
+      name: "Educational Platforms",
+      category: "tools",
+    } /* Added to reflect tech education tools */,
   ],
 
   // =========================
@@ -156,18 +163,32 @@ const portfolioData = {
   // =========================
   experience: [
     {
-      title: "Programming Instructor | Web Development Mentor",
+      title: "Programming Instructor & Web Development Mentor",
       company: "Timedoor Academy",
       period: "August 2024 - Present",
       description:
-        "I educate and mentor students aged 5-18 in various technologies including Scratch, robotics, frontend development, and app development. I design and implement an AI curriculum introducing foundational concepts through age-appropriate activities, while creating project-based learning modules demonstrating real-world AI applications. Using data analytics, I develop personalized learning paths to identify individual student needs. I conduct interactive classes and guide students through coding projects to develop problem-solving skills, and prepare detailed progress reports analyzing student achievements.",
+        "I teach and mentor students aged 5-18 at Timedoor Academy, covering Scratch, robotics, frontend development (HTML, CSS, JavaScript, React), and app development. I create an AI curriculum aligned with UAE's AI 2031 vision using age-appropriate projects. Using data analytics, I design personalized learning paths, lead interactive coding sessions, and provide progress reports, boosting engagement by 90%. This role reflects my passion for shaping UAE's tech future with my Egyptian roots.",
     },
     {
       title: "Community Manager",
       company: "E-Spaces",
       period: "May 2023 - March 2024",
       description:
-        "I managed community relations and day-to-day operations, ensuring clients had access to well-organized and functional office spaces. Working closely with clients, I met their needs and streamlined processes to enhance the overall customer experience. I coordinated facility management, maintained a professional environment for all members, and implemented feedback systems to continuously improve service quality.",
+        "I managed community relations and operations at E-Spaces, ensuring organized office spaces. I worked with clients to improve experiences, coordinated facilities, and used feedback to enhance services, building skills in leadership and data analysis for my UAE tech education work.",
+    },
+    {
+      title: "Microsoft Tech Club President",
+      company: "Al Azhar University",
+      period: "2021 - 2024",
+      description:
+        "As President of a 370-member club, I led 300+ workshops for 3,000+ students, launched a website and app, and managed seven tech tracks, including Java for 60+ students. My methods doubled engagement, fueling my mission to empower tech leaders, now in the UAE.",
+    },
+    {
+      title: "Microsoft Egypt Representative",
+      company: "Microsoft Egypt",
+      period: "2023 - 2024",
+      description:
+        "I organized tech education events at institutions like Smart Campus and Galala University, shared resources, and gathered feedback. This role honed my ability to connect global tech trends with UAE educational goals.",
     },
   ],
 
@@ -663,6 +684,3 @@ const portfolioData = {
     },
   ],
 };
-
-// Uncomment if using modules
-// export default portfolioData;
