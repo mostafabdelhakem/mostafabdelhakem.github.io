@@ -1,22 +1,21 @@
 /* =========================================================
    1. Root Variables (Light & Dark Theme)
    ========================================================= */
-
 :root {
-  /* Light theme variables centered around Harmony Gold */
-  --primary: hsl(42, 56%, 53%);
-  --primary-hover: hsl(42, 56%, 43%);
-  --secondary: hsl(42, 40%, 70%);
-  --accent: hsl(42, 70%, 60%);
-  --text: hsl(30, 10%, 20%);
-  --text-light: hsl(30, 10%, 50%);
-  --bg: hsl(39, 50%, 95%);
-  --bg-off: hsl(39, 40%, 90%);
-  --border: hsl(42, 30%, 80%);
-  --shadow: 0 0 0 1px hsla(42, 20%, 50%, 0.05),
-    0 1px 3px 0 hsla(42, 20%, 50%, 0.15);
-  --shadow-hover: 0 0 0 1px hsla(42, 20%, 50%, 0.05),
-    0 10px 15px -3px hsla(42, 20%, 50%, 0.15);
+  /* Light theme variables */
+  --primary: hsl(162, 100%, 25%);
+  --primary-hover: hsl(170, 100%, 15%);
+  --secondary: hsl(230, 44%, 56%);
+  --accent: hsl(84, 55%, 51%);
+  --text: hsl(210, 7%, 14%);
+  --text-light: hsl(210, 6%, 44%);
+  --bg: hsl(0, 0%, 100%);
+  --bg-off: hsl(210, 20%, 98%);
+  --border: hsl(210, 8%, 89%);
+  --shadow: 0 0 0 1px hsla(240, 4%, 26%, 0.05),
+    0 1px 3px 0 hsla(240, 4%, 26%, 0.15);
+  --shadow-hover: 0 0 0 1px hsla(240, 4%, 26%, 0.05),
+    0 10px 15px -3px hsla(240, 4%, 26%, 0.15);
   --radius: 8px;
   --transition: all 0.2s ease;
   --max-width: 1200px;
@@ -25,20 +24,21 @@
 
 /* Dark theme variables */
 [data-theme="dark"] {
-  --primary: hsl(42, 56%, 63%);
-  --primary-hover: hsl(42, 56%, 53%);
-  --secondary: hsl(42, 40%, 50%);
-  --accent: hsl(42, 70%, 70%);
-  --text: hsl(39, 50%, 95%);
-  --text-light: hsl(39, 40%, 75%);
-  --bg: hsl(30, 10%, 10%);
-  --bg-off: hsl(30, 10%, 15%);
-  --border: hsl(42, 30%, 25%);
-  --shadow: 0 0 0 1px hsla(42, 20%, 50%, 0.05),
-    0 1px 3px 0 hsla(42, 20%, 50%, 0.15);
-  --shadow-hover: 0 0 0 1px hsla(42, 20%, 50%, 0.05),
-    0 10px 15px -3px hsla(42, 20%, 50%, 0.15);
+  --primary: hsl(157, 89%, 58%);
+  --primary-hover: hsl(157, 45%, 49%);
+  --secondary: hsl(230, 87%, 73%);
+  --accent: hsl(84, 65%, 72%);
+  --text: hsl(0, 0%, 96%);
+  --text-light: hsl(220, 14%, 68%);
+  --bg: hsl(0, 0%, 4%);
+  --bg-off: hsl(0, 0%, 7%);
+  --border: hsl(0, 0%, 18%);
+  --shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.05),
+    0 1px 3px 0 hsla(0, 0%, 100%, 0.1);
+  --shadow-hover: 0 0 0 1px hsla(0, 0%, 100%, 0.05),
+    0 10px 15px -3px hsla(0, 0%, 100%, 0.1);
 }
+
 /* =========================================================
    2. Global Reset & Base Styles
    ========================================================= */
