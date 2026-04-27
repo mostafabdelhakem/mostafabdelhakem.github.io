@@ -1,44 +1,51 @@
 /* =========================================================
-   1. Root Variables (Light & Dark Theme)
+   1. Root Variables (Heritage Gold & Alabaster Theme)
    ========================================================= */
 :root {
   /* Light theme variables */
-  --primary: hsl(162, 100%, 25%);
-  --primary-hover: hsl(170, 100%, 15%);
-  --secondary: hsl(230, 44%, 56%);
-  --accent: hsl(84, 55%, 51%);
-  --text: hsl(210, 7%, 14%);
-  --text-light: hsl(210, 6%, 44%);
-  --bg: hsl(0, 0%, 100%);
-  --bg-off: hsl(210, 20%, 98%);
-  --border: hsl(210, 8%, 89%);
-  --shadow: 0 0 0 1px hsla(240, 4%, 26%, 0.05),
-    0 1px 3px 0 hsla(240, 4%, 26%, 0.15);
-  --shadow-hover: 0 0 0 1px hsla(240, 4%, 26%, 0.05),
-    0 10px 15px -3px hsla(240, 4%, 26%, 0.15);
+  --primary: hsl(41, 43%, 49%); /* Heritage Gold #B28F46 */
+  --primary-hover: hsl(42, 51%, 37%); /* Deeper Gold #8E6F2E used as hover */
+  --secondary: hsl(38, 48%, 60%); /* Lighter Gold #C9A86A */
+  --accent: hsl(42, 51%, 37%); /* Deeper Gold #8E6F2E */
+
+  --text: hsl(0, 0%, 0%); /* Black #000000 */
+  --text-light: hsl(40, 10%, 40%); /* Muted brownish-grey for hierarchy */
+
+  --bg: hsl(40, 33%, 96%); /* Alabaster Cream #F8F5F0 */
+  --bg-off: hsl(40, 20%, 92%); /* Slightly darker cream for sections */
+
+  --border: hsl(41, 25%, 85%);
+  --shadow:
+    0 0 0 1px hsla(41, 30%, 20%, 0.05), 0 1px 3px 0 hsla(41, 30%, 20%, 0.1);
+  --shadow-hover:
+    0 0 0 1px hsla(41, 30%, 20%, 0.05),
+    0 10px 15px -3px hsla(41, 30%, 20%, 0.15);
+
   --radius: 8px;
-  --transition: all 0.2s ease;
+  --transition: all 0.3s ease;
   --max-width: 1200px;
   --header-height: 80px;
 }
 
-/* Dark theme variables */
+/* Dark theme variables (Inverted for Dark Mode) */
 [data-theme="dark"] {
-  --primary: hsl(157, 89%, 58%);
-  --primary-hover: hsl(157, 45%, 49%);
-  --secondary: hsl(230, 87%, 73%);
-  --accent: hsl(84, 65%, 72%);
-  --text: hsl(0, 0%, 96%);
-  --text-light: hsl(220, 14%, 68%);
-  --bg: hsl(0, 0%, 4%);
-  --bg-off: hsl(0, 0%, 7%);
-  --border: hsl(0, 0%, 18%);
-  --shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.05),
-    0 1px 3px 0 hsla(0, 0%, 100%, 0.1);
-  --shadow-hover: 0 0 0 1px hsla(0, 0%, 100%, 0.05),
-    0 10px 15px -3px hsla(0, 0%, 100%, 0.1);
-}
+  --primary: hsl(41, 43%, 60%); /* Slightly brighter Gold for dark BG */
+  --primary-hover: hsl(41, 43%, 70%);
+  --secondary: hsl(38, 48%, 65%);
+  --accent: hsl(38, 48%, 75%);
 
+  --text: hsl(40, 33%, 96%); /* Alabaster Cream becomes the text color */
+  --text-light: hsl(40, 15%, 75%);
+
+  --bg: hsl(40, 10%, 8%); /* Very dark warm black/brown */
+  --bg-off: hsl(40, 10%, 12%);
+
+  --border: hsl(40, 10%, 20%);
+  --shadow:
+    0 0 0 1px hsla(0, 0%, 100%, 0.05), 0 1px 3px 0 hsla(0, 0%, 100%, 0.1);
+  --shadow-hover:
+    0 0 0 1px hsla(0, 0%, 100%, 0.05), 0 10px 15px -3px hsla(0, 0%, 100%, 0.1);
+}
 /* =========================================================
    2. Global Reset & Base Styles
    ========================================================= */
@@ -56,8 +63,18 @@ html {
 }
 
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
   line-height: 1.5;
   color: var(--text);
   background-color: var(--bg);
